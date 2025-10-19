@@ -1,0 +1,259 @@
+:root {
+    --main-bg-color: #f4f4f9;
+    --header-bg-color: #222;
+    --text-color: #333;
+    --link-color: #007bff;
+    --accent-color-roblox: #00b0ff;
+    --accent-color-cs2: #ff8c00;
+    --footer-bg-color: #333;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--accent-color-roblox);
+    border-bottom: 2px solid var(--accent-color-roblox);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+h2 {
+    color: var(--header-bg-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #eee;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.news-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.news-card, .feature-card {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+    transition: box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.news-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.cs2-news-h3 {
+    color: var(--accent-color-cs2);
+}
+.roblox-news-h3 {
+    color: var(--accent-color-roblox);
+}
+
+.news-small-text {
+    display: block; 
+    text-align: right; 
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 10px;
+}
+
+.game-logo {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.game-header-image {
+    width: 120px;
+    margin: 15px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-btn {
+    text-decoration: none;
+    background-color: var(--accent-color-cs2);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.download-btn:hover {
+    background-color: #d17500;
+    transform: translateY(-2px);
+}
+
+.roblox-accent {
+    color: var(--accent-color-roblox);
+    border-bottom-color: var(--accent-color-roblox) !important;
+}
+.roblox-btn {
+    background-color: var(--accent-color-roblox) !important;
+}
+.roblox-btn:hover {
+    background-color: #0088cc !important;
+}
+
+.cs2-accent {
+    color: var(--accent-color-cs2);
+    border-bottom-color: var(--accent-color-cs2) !important;
+}
+
+.feature-card.roblox-feature {
+    border-left: 3px solid var(--accent-color-roblox);
+}
+.feature-card.cs2-feature {
+    border-left: 3px solid var(--accent-color-cs2);
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .comparison-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .comparison-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+}
